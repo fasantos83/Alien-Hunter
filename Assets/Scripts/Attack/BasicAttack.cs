@@ -7,7 +7,7 @@ public class BasicAttack : MonoBehaviour {
     public GameObject laser;
     public Transform laserSpawn;
     public float fireDelay = 0.3f;
-    public float fireCounter = 0f;
+    protected float fireCounter = 0f;
 
     public Transform doubleShotSpawn1;
     public Transform doubleShotSpawn2;

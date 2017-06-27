@@ -22,6 +22,8 @@ public class LaserController : MonoBehaviour {
             GameManager.instance.KillPlayer();
         } else if (other.CompareTag("Shield")) {
             GameManager.instance.ActivateShield(false);
+        } else if (other.tag.StartsWith("Boss")) {
+            BossManager.instance.DamagePart(other.gameObject);
         }
     }
 

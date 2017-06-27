@@ -21,8 +21,9 @@ public class GameManager : MonoBehaviour {
     public GameObject[] lifeIcons;
     public int playerLives = 3;
     public int maxPlayerLives = 5;
-
+    
     public Text scoreText;
+    public GameObject levelCompleteScreen;
 
     private int currentScore = 0;
     private bool spawnWave = true;
@@ -166,6 +167,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public void LevelComplete() {
+        playerController.gameObject.SetActive(false);
+        levelCompleteScreen.SetActive(true);
+    }
+    
     public void RespawnPlayer() {
         playerController.transform.position = playerSpawnPoint.position;
         playerController.gameObject.SetActive(true);
